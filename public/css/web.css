@@ -1,0 +1,1637 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@500&display=swap');
+
+* {
+    font-family: 'El Messiri', sans-serif;
+}
+
+nav {
+    direction: rtl;
+    background-color: #2e2c2c;
+}
+
+nav a {
+    color: #EFD739;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 500ms ease 0ms
+}
+
+nav img {
+    width: 80px
+}
+
+nav .title {
+    text-align: center;
+}
+
+nav .nav-item:nth-child(1) {
+    margin-left: -20px;
+}
+
+nav .nav-item {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+nav a:hover {
+    color: #EFD739;
+    font-size: 18px;
+}
+
+.login {
+    direction: rtl;
+    zoom: 120%
+}
+
+.login .main div {
+    float: right;
+    margin-right: 60px;
+}
+
+.login .animated {
+    width: 600px;
+    float: left;
+}
+
+.login .main div a {
+    font-size: 250px;
+    color: #EFD739
+}
+
+.login .main form {
+    margin-top: -140px;
+}
+
+.login .title {
+    color: #ffffff;
+    font-size: 25px
+}
+
+.login .main form input {
+    border: none;
+    border-bottom-style: solid;
+    border-color: #EFD739;
+    margin-top: 20px;
+    background-color: #343232;
+    width: 300px;
+    outline: none;
+    border-width: 1px;
+    color: white;
+    font-size: 12px;
+}
+
+.login .main form button {
+    background-color: #EFD739;
+    border: none;
+    border-radius: 50%;
+    transition: all 500ms ease 0ms;
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+.login .main form input::placeholder {
+    color: rgba(255, 255, 255, 0.637);
+}
+
+.login .main form button:hover {
+    background-color: #ffffff
+}
+
+.register {
+    direction: rtl;
+    zoom: 120%
+}
+
+.register .main .animated {
+    width: 600px;
+    position: absolute;
+    top: 60px;
+    left: 10px
+}
+
+.register .main {
+    margin-right: 20px;
+    color: #EFD739;
+    height: 100%;
+    width: 30%;
+    margin-top: 20px;
+}
+
+.register form input {
+    border: none;
+    background-color: #343232;
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: #EFD739;
+    width: 300px;
+    margin-top: 40px;
+    outline: none;
+    color: #ffffff
+}
+
+.register form button {
+    margin-top: 20px;
+    background-color: #EFD739;
+    border: none;
+    border-radius: 50%;
+    font-size: 25px;
+    transition: all 500ms ease 0ms;
+}
+
+.register form button:hover {
+    background-color: #ffffff
+}
+
+.index {
+    direction: rtl;
+    width: 100%;
+}
+
+.index .contorls {
+    color: #ffffff;
+    display: grid;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.index .contorls input {
+    background-color: #2e2c2c;
+    border: 1px solid #EFD739;
+    border-radius: 8px;
+    width: 300px;
+    outline: none;
+    color: white;
+}
+
+.index .contorls select {
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #EFD739;
+    border: none;
+    border-radius: 20px;
+}
+
+.index small {
+    color: white
+}
+
+.index img {
+    width: 200px;
+    border-radius: 10px;
+    border-bottom-color: #EFD739;
+    border-bottom-style: solid;
+}
+
+.index-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.index-cards .myCard {
+    width: 200px;
+    background-color: #2e2c2c;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+    height: 370px;
+    box-shadow: 10px 10px #00000033;
+    position: relative;
+}
+
+.index-cards .myCard .title {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.index-cards .myCard .description {
+    color: #EFD739;
+    font-size: 12px;
+    margin-right: 2px;
+}
+
+.index-cards .myCard .price {
+    color: white;
+    font-size: 15px;
+    margin-top: 50px;
+    margin-right: 20px;
+}
+
+.index-cards .myCard span {
+    color: #EFD739;
+    font-size: 10px;
+}
+
+.index-cards .myCard .out-of-stuck {
+    background-color: #C64747;
+    width: 80px;
+    color: #343232;
+    position: absolute;
+    top: 10px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    text-align: center;
+}
+
+.bill {
+    direction: rtl;
+}
+
+.bill .clear {
+    background-color: #C64747;
+    margin-right: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 12px;
+    color: #343232;
+}
+
+.bill table {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.bill table th {
+    color: #EFD739;
+}
+
+.bill table td {
+    color: white;
+}
+
+.bill table button {
+    border: none;
+    font-size: 15px;
+    border-radius: 50%;
+    background-color: #EFD739
+}
+
+.bill table input {
+    background-color: #343232;
+    border: none;
+    color: white;
+    border-bottom: solid 1px #EFD739;
+    outline: none;
+    font-size: 14px;
+}
+
+.bill .info input {
+    background-color: #343232;
+    color: white;
+    border: none;
+    border-bottom: solid 1px #EFD739;
+}
+
+.bill .info button {
+    background-color: #EFD739;
+    border: none;
+    width: 120px;
+    border-radius: 12px;
+    transition: all 500ms ease 0ms;
+}
+
+.bill .info button:hover {
+    width: 150px;
+}
+
+.folders {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.folders .folder-card p {
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #2e2c2c;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    box-shadow: 5px 5px #efd7392f;
+    padding-right: 10px;
+    padding-left: 10px;
+    cursor: default;
+    transition: all 500ms ease 0ms;
+}
+
+.folders .folder-card p:hover {
+    font-size: 20px;
+}
+
+.get-bill {
+    direction: rtl;
+    text-align: center;
+}
+
+.get-bill .info-bill {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.get-bill .info-bill p {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+    margin-top: 20px;
+}
+
+.get-bill .info-bill span {
+    color: #EFD739;
+}
+
+.get-bill .title {
+    color: white;
+}
+
+.get-bill table th {
+    color: #EFD739;
+}
+
+.get-bill table td {
+    color: white;
+}
+
+.get-bill button {
+    background-color: #C64747;
+    border: none;
+    border-radius: 10px;
+    transition: all 500ms ease 0ms;
+}
+
+.get-bill button:hover {
+    font-size: 20px;
+    box-shadow: 6px 6px #18171785;
+}
+
+.product-list {
+    direction: rtl
+}
+
+.product-list p {
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    margin-top: 10px;
+}
+
+.product-list small {
+    color: #EFD739;
+}
+
+.product-list .contorls * {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.product-list .contorls .filter {
+    background-color: #EFD739;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+}
+
+.product-list .contorls .cat {
+    background-color: #343232;
+    color: white;
+    text-align: center;
+    border: solid 2px #EFD739;
+    border-radius: 8px;
+    outline: none;
+}
+
+.product-list .contorls button {
+    background-color: #EFD739;
+    border-radius: 10px;
+    border: none;
+    transition: all 500ms ease 0ms;
+}
+
+.product-list .contorls button:hover {
+    background-color: #ffffff;
+}
+
+.product-list table th {
+    color: #EFD739
+}
+
+.product-list table td {
+    color: #ffffff
+}
+
+.product-list table button {
+    border: none;
+    border-radius: 10px;
+    transition: all 500ms ease 0ms;
+}
+
+.product-list table button:hover {
+    font-size: 25px;
+}
+
+.product-list table .stock {
+    background-color: #C64747;
+}
+
+.product-list table .in-stock {
+    background-color: rgba(13, 189, 13, 0.877)
+}
+
+.product-list table .edit {
+    background-color: #EFD739;
+}
+
+.product-list table .delete {
+    background-color: #C64747
+}
+
+.category {
+    direction: rtl;
+}
+
+.category p {
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    margin-top: 14px;
+}
+
+.category small {
+    color: #EFD739;
+}
+
+.category .contorls select {
+    border: none;
+    border-radius: 10px;
+}
+
+.category .contorls * {
+    margin: 0px 10px 0px 10px;
+}
+
+.category .contorls button {
+    border: none;
+    border-radius: 10px;
+    background-color: #EFD739;
+    transition: all 500ms ease 0ms;
+}
+
+.category .contorls button:hover {
+    font-size: 25px;
+}
+
+.category table th {
+    color: #EFD739;
+}
+
+.category table td {
+    color: white;
+}
+
+.category table button {
+    border: none;
+    border-radius: 10px;
+    transition: all 500ms ease 0ms;
+}
+
+.category table button:hover {
+    font-size: 25px;
+}
+
+.category table .edit {
+    background-color: #EFD739;
+}
+
+.category table .delete {
+    background-color: #C64747
+}
+
+.profiles-list {
+    direction: rtl;
+}
+
+.profiles-list p {
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.profiles-list small {
+    color: #EFD739
+}
+
+.profiles-list .contorls button {
+    border: none;
+    border-radius: 10px;
+    transition: all 500ms ease 0ms;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.profiles-list .contorls button:hover {
+    font-size: 20px;
+    box-shadow: 10px 10px #00000033
+}
+
+.profiles-list .contorls .worker {
+    background-color: #EFD739;
+}
+
+.profiles-list .contorls .admins {
+    color: #EFD739;
+    background-color: #343232;
+    border: 1px solid #EFD739;
+}
+
+.profiles-list table th {
+    color: #EFD739;
+}
+
+.profiles-list table td {
+    color: white
+}
+
+.profiles-list table button {
+    border: none;
+    border-radius: 10px;
+    transition: all 500ms ease 0ms;
+}
+
+.profiles-list table button:hover {
+    font-size: 25px;
+}
+
+.profiles-list .accept {
+    background-color: rgba(13, 189, 13, 0.877);
+}
+
+.profiles-list .reject {
+    background-color: #C64747;
+}
+
+.add-category {
+    direction: rtl;
+}
+
+.add-category p {
+    font-size: 40px;
+    color: white;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.add-category .animated {
+    width: 700px;
+    position: absolute;
+    left: 10px;
+    top: 80px;
+}
+
+.add-category .add-category-body {
+    float: right;
+    width: 500px;
+    justify-content: center;
+}
+
+.add-category .add-category-body input {
+    margin-top: 200px;
+    width: 400px;
+    outline: none;
+    background-color: #343232;
+    border: none;
+    border-bottom: 1px solid #EFD739;
+    color: white;
+}
+
+.add-category .add-category-body button {
+    margin-top: 150px;
+    background-color: #EFD739;
+    border: none;
+    border-radius: 50%;
+    font-size: 30px;
+    transition: all 500ms ease 0ms
+}
+
+.add-category .add-category-body button:hover {
+    background-color: #ffffff
+}
+
+.add-product {
+    direction: rtl;
+}
+
+.add-product .mat p {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+}
+
+.add-product .animated {
+    width: 700px;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+
+.add-product .mat {
+    float: right;
+    width: 500px;
+    margin-top: 40px;
+}
+
+.add-product .mat input {
+    margin-top: 50px;
+    border: none;
+    border-bottom: 1px solid #EFD739;
+    background-color: #343232;
+    outline: none;
+    color: white;
+    width: 400px
+}
+
+.add-product .mat select {
+    margin-top: 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: #EFD739;
+    width: 400px
+}
+
+.add-product .mat button {
+    margin-top: 30px;
+    border: none;
+    background-color: #EFD739;
+    border-radius: 50%;
+    font-size: 30px;
+    transition: all 500ms ease 0ms;
+}
+
+.add-product .mat button:hover {
+    background-color: #ffffff
+}
+
+.work-info {
+    direction: rtl;
+}
+
+.work-info .animated {
+    width: 700px;
+    float: left;
+}
+
+.work-info .about {
+    width: 500px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.work-info .about p {
+    color: white;
+    margin-top: 60px;
+    font-size: 20px;
+}
+
+.work-info span {
+    color: #EFD739;
+}
+
+.work-info canvas {
+    margin-top: 30px;
+}
+
+.password-error p {
+    color: white;
+    margin-top: 20px;
+    font-size: 30px
+}
+
+.password-error button {
+    width: 200px;
+    border: none;
+    border-radius: 10px;
+}
+
+.password-error .animated {
+    width: 700px;
+    margin-top: -30px;
+}
+
+.pending {
+    direction: rtl;
+}
+
+.pending .text {
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+    width: 400px;
+}
+
+.pending .text a {
+    margin-top: 40px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: default;
+}
+
+.pending .text span {
+    color: #EFD739;
+}
+
+.pending .animated {
+    position: absolute;
+    width: 700px;
+    left: 10px;
+    top: 70px;
+}
+
+.product-info {
+    direction: rtl;
+}
+
+.product-info .des {
+    float: right;
+    margin-right: 20px;
+}
+
+.product-info span {
+    color: #EFD739
+}
+
+.product-info .des p {
+    color: white;
+    font-size: 25px;
+    margin-top: 60px;
+}
+
+.product-info .animated {
+    width: 700px;
+    float: left;
+}
+
+.getProduct {
+    direction: rtl;
+}
+
+.getProduct .des {
+    float: right;
+    margin-right: 20px;
+}
+
+.getProduct .des p {
+    margin-top: 70px;
+    color: white;
+    font-size: 25px
+}
+
+.getProduct .des span {
+    color: #EFD739;
+}
+
+.getProduct img {
+    width: 500px;
+    margin-top: 40px;
+    float: left;
+    margin-left: 40px;
+    border-radius: 20px;
+    box-shadow: 15px 15px #2e2c2c;
+}
+
+@media only screen and (max-width:1100px) {
+
+    nav {
+        direction: rtl;
+        background-color: #2e2c2c;
+        padding-top: 40px!important;
+    }
+
+    nav a {
+        color: #EFD739;
+        text-decoration: none;
+        font-size: 15px;
+        transition: all 500ms ease 0ms
+    }
+
+    nav img {
+        width: 80px
+    }
+
+    nav .title {
+        text-align: center;
+    }
+
+    nav .nav-item:nth-child(1) {
+        margin-left: -20px;
+    }
+
+    nav .nav-item {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    nav a:hover {
+        color: #EFD739;
+        font-size: 18px;
+    }
+
+    .login {
+        direction: rtl;
+        zoom: 100%;
+        width: 100%;
+    }
+
+    .login .main div{
+       margin-right: 25px;
+       margin-left: 0px;
+       justify-content: center;
+    }
+
+    .login .animated {
+        display: none
+    }
+
+    .login .main div a {
+        font-size: 250px;
+        color: #EFD739
+    }
+
+    .login .main form {
+        margin-top: -140px;
+    }
+
+    .login .title {
+        color: #ffffff;
+        font-size: 25px
+    }
+
+    .login .main form input {
+        border: none;
+        border-bottom-style: solid;
+        border-color: #EFD739;
+        margin-top: 40px;
+        background-color: #343232;
+        width: 300px;
+        outline: none;
+        border-width: 1px;
+        color: white;
+        font-size: 12px;
+    }
+
+    .login .main form button {
+        background-color: #EFD739;
+        border: none;
+        border-radius: 50%;
+        transition: all 500ms ease 0ms;
+        margin-top: 30px;
+        font-size: 25px;
+    }
+
+    .login .main form input::placeholder {
+        color: rgba(255, 255, 255, 0.637);
+    }
+
+    .login .main form button:hover {
+        background-color: #ffffff
+    }
+
+    .register {
+        direction: rtl;
+        zoom: 100%
+    }
+
+    .register .main .animated {
+        display: none;
+    }
+
+    .register .main {
+        margin-right: 20px;
+        color: #EFD739;
+        height: 100%;
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .register form input {
+        border: none;
+        background-color: #343232;
+        border-bottom-style: solid;
+        border-width: 1px;
+        border-color: #EFD739;
+        width: 300px;
+        margin-top: 60px;
+        outline: none;
+        color: #ffffff
+    }
+
+    .register form button {
+        margin-top: 20px;
+        background-color: #EFD739;
+        border: none;
+        border-radius: 50%;
+        font-size: 25px;
+        transition: all 500ms ease 0ms;
+    }
+
+    .register form button:hover {
+        background-color: #ffffff
+    }
+
+    .index {
+        direction: rtl;
+        width: 100%;
+    }
+
+    .index .contorls {
+        color: #ffffff;
+        display: grid;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .index .contorls input {
+        background-color: #2e2c2c;
+        border: 1px solid #EFD739;
+        border-radius: 8px;
+        width: 300px;
+        outline: none;
+        color: white;
+    }
+
+    .index .contorls select {
+        width: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #EFD739;
+        border: none;
+        border-radius: 20px;
+        color: black;
+    }
+
+    .index small {
+        color: white
+    }
+
+    .index img {
+        width: 150px;
+        border-radius: 10px;
+        border-bottom-color: #EFD739;
+        border-bottom-style: solid;
+    }
+
+    .index-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
+    .index-cards .myCard {
+        width: 150px;
+        background-color: #2e2c2c;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-top: 20px;
+        border-radius: 10px;
+        height: 270px;
+        box-shadow: 10px 10px #00000033;
+        position: relative;
+    }
+
+    .index-cards .myCard .title {
+        color: white;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .index-cards .myCard .description {
+        color: #EFD739;
+        font-size: 12px;
+        margin-right: 2px;
+    }
+
+    .index-cards .myCard .price {
+        color: white;
+        position :absolute;
+        font-size: 12px;
+        bottom: -15px;
+    }
+
+    .index-cards .myCard span {
+        color: #EFD739;
+        font-size: 10px;
+    }
+
+    .index-cards .myCard .out-of-stuck {
+        background-color: #C64747;
+        width: 80px;
+        color: #343232;
+        position: absolute;
+        top: 10px;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        text-align: center;
+    }
+
+    .bill {
+        direction: rtl;
+    }
+
+    .bill .clear {
+        background-color: #C64747;
+        margin-right: 10px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 12px;
+        color: #343232;
+    }
+
+    .bill table {
+        text-align: center;
+        margin-top: 10px;
+        width: 99%
+    }
+
+    .bill table th {
+        color: #EFD739;
+        font-size: 12px;
+    }
+
+    .bill table td {
+        color: white;
+        font-size: 12px;
+    }
+
+    .bill table button {
+        border: none;
+        font-size: 12px;
+        border-radius: 50%;
+        background-color: #EFD739;
+        color: black;
+    }
+
+    .bill table input {
+        background-color: #343232;
+        border: none;
+        color: white;
+        border-bottom: solid 1px #EFD739;
+        outline: none;
+        font-size: 12px;
+        width: 50px;
+    }
+
+    .bill .info input {
+        background-color: #343232;
+        color: white;
+        border: none;
+        border-bottom: solid 1px #EFD739;
+        width: 300px
+    }
+
+    .bill .info button {
+        background-color: #EFD739;
+        border: none;
+        width: 120px;
+        border-radius: 12px;
+        transition: all 500ms ease 0ms;
+        color: black;
+    }
+
+    .bill .info button:hover {
+        width: 150px;
+    }
+
+    .folders {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .folders .folder-card p {
+        margin-left: 20px;
+        margin-right: 20px;
+        background-color: #2e2c2c;
+        border-radius: 5px;
+        color: white;
+        font-size: 18px;
+        box-shadow: 5px 5px #efd7392f;
+        padding-right: 10px;
+        padding-left: 10px;
+        cursor: default;
+        transition: all 500ms ease 0ms;
+    }
+
+    .folders .folder-card p:hover {
+        font-size: 20px;
+    }
+
+    .get-bill {
+        direction: rtl;
+        text-align: center;
+    }
+
+    .get-bill .info-bill {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .get-bill .info-bill p {
+        margin-left: 10px;
+        margin-right: 10px;
+        color: white;
+        margin-top: 20px;
+        font-size: 15px;
+    }
+
+    .get-bill .info-bill span {
+        color: #EFD739;
+    }
+
+    .get-bill .title {
+        color: white;
+    }
+
+    .get-bill table th {
+        color: #EFD739;
+        font-size: 15px;
+    }
+
+    .get-bill table td {
+        color: white;
+        font-size: 15px;
+    }
+
+    .get-bill button {
+        background-color: #C64747;
+        border: none;
+        border-radius: 10px;
+        transition: all 500ms ease 0ms;
+        color: black;
+    }
+
+    .get-bill button:hover {
+        font-size: 20px;
+        box-shadow: 6px 6px #18171785;
+    }
+
+    .product-list {
+        direction: rtl
+    }
+
+    .product-list p {
+        text-align: center;
+        font-size: 25px;
+        color: white;
+        margin-top: 10px;
+    }
+
+    .product-list small {
+        color: #EFD739;
+    }
+
+    .profiles-list .contorls {
+        justify-content: center;
+        display: grid;
+    }
+
+    .product-list .contorls * {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .product-list .contorls .filter {
+        background-color: #EFD739;
+        text-align: center;
+        border: none;
+        border-radius: 8px;
+        color: black;
+    }
+
+    .product-list .contorls .cat {
+        background-color: #343232;
+        color: white;
+        text-align: center;
+        border: solid 2px #EFD739;
+        border-radius: 8px;
+        outline: none;
+    }
+
+    .product-list .contorls button {
+        background-color: #EFD739;
+        border-radius: 10px;
+        border: none;
+        transition: all 500ms ease 0ms;
+        color: black;
+        margin-top: 10px;
+    }
+
+    .product-list .contorls button:hover {
+        background-color: #ffffff;
+    }
+
+    .product-list table th {
+        color: #EFD739
+    }
+
+    .product-list table td {
+        color: #ffffff
+    }
+
+    .product-list table button {
+        border: none;
+        border-radius: 10px;
+        transition: all 500ms ease 0ms;
+    }
+
+    .product-list table button:hover {
+        font-size: 25px;
+    }
+
+    .product-list table .stock {
+        background-color: #C64747;
+    }
+
+    .product-list table .in-stock {
+        background-color: rgba(13, 189, 13, 0.877)
+    }
+
+    .product-list table .edit {
+        background-color: #EFD739;
+    }
+
+    .product-list table .delete {
+        background-color: #C64747
+    }
+
+    .category {
+        direction: rtl;
+    }
+
+    .category p {
+        font-size: 25px;
+        color: white;
+        text-align: center;
+        margin-top: 14px;
+    }
+
+    .category small {
+        color: #EFD739;
+    }
+
+    .category .contorls select {
+        border: none;
+        border-radius: 10px;
+        color: black;
+    }
+
+    .category .contorls * {
+        margin: 0px 10px 0px 10px;
+    }
+
+    .category .contorls button {
+        border: none;
+        border-radius: 10px;
+        background-color: #EFD739;
+        transition: all 500ms ease 0ms;
+    }
+
+    .category .contorls button:hover {
+        font-size: 25px;
+    }
+
+    .category table th {
+        color: #EFD739;
+    }
+
+    .category table td {
+        color: white;
+    }
+
+    .category table button {
+        border: none;
+        border-radius: 10px;
+        transition: all 500ms ease 0ms;
+    }
+
+    .category table button:hover {
+        font-size: 25px;
+    }
+
+    .category table .edit {
+        background-color: #EFD739;
+    }
+
+    .category table .delete {
+        background-color: #C64747
+    }
+
+    .profiles-list {
+        direction: rtl;
+    }
+
+    .profiles-list p {
+        text-align: center;
+        color: white;
+        font-size: 25px;
+        margin-top: 10px;
+    }
+
+    .profiles-list small {
+        color: #EFD739
+    }
+
+    .profiles-list .contorls{
+        display: grid;
+        justify-content: center
+    }
+
+    .profiles-list .contorls button {
+        border: none;
+        border-radius: 10px;
+        transition: all 500ms ease 0ms;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 10px;
+        width: 200px;
+        color: black;
+    }
+
+    .profiles-list .contorls button:hover {
+        font-size: 20px;
+        box-shadow: 10px 10px #00000033
+    }
+
+    .profiles-list .contorls .worker {
+        background-color: #EFD739;
+    }
+
+    .profiles-list .contorls .admins {
+        color: #EFD739;
+        background-color: #343232;
+        border: 1px solid #EFD739;
+    }
+
+    .profiles-list table th {
+        color: #EFD739;
+    }
+
+    .profiles-list table td {
+        color: white
+    }
+
+    .profiles-list table button {
+        border: none;
+        border-radius: 10px;
+        transition: all 500ms ease 0ms;
+    }
+
+    .profiles-list table button:hover {
+        font-size: 25px;
+    }
+
+    .profiles-list .accept {
+        background-color: rgba(13, 189, 13, 0.877);
+    }
+
+    .profiles-list .reject {
+        background-color: #C64747;
+    }
+
+    .add-category {
+        direction: rtl;
+        width: 100%;
+    }
+
+    .add-category p {
+        font-size: 40px;
+        color: white;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .add-category .animated {
+        display: none
+    }
+
+    .add-category .add-category-body {
+        float: right;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .add-category .add-category-body input {
+        margin-top: 100px;
+        width: 300px;
+        outline: none;
+        background-color: #343232;
+        border: none;
+        border-bottom: 1px solid #EFD739;
+        color: white;
+    }
+
+    .add-category .add-category-body button {
+        margin-top: 100px;
+        background-color: #EFD739;
+        border: none;
+        border-radius: 50%;
+        font-size: 30px;
+        transition: all 500ms ease 0ms
+    }
+
+    .add-category .add-category-body button:hover {
+        background-color: #ffffff
+    }
+
+    .add-product {
+        direction: rtl;
+    }
+
+    .add-product .mat p {
+        color: white;
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .add-product .animated {
+        display: none
+    }
+
+    .add-product .mat {
+        float: none;
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .add-product .mat input {
+        margin-top: 50px;
+        border: none;
+        border-bottom: 1px solid #EFD739;
+        background-color: #343232;
+        outline: none;
+        color: white;
+        width: 250px
+    }
+
+    .add-product .mat select {
+        margin-top: 50px;
+        border: none;
+        border-radius: 10px;
+        background-color: #EFD739;
+        width: 250px
+    }
+
+    .add-product .mat button {
+        margin-top: 30px;
+        border: none;
+        background-color: #EFD739;
+        border-radius: 50%;
+        font-size: 30px;
+        transition: all 500ms ease 0ms;
+    }
+
+    .add-product .mat button:hover {
+        background-color: #ffffff
+    }
+
+    .work-info {
+        direction: rtl;
+    }
+
+    .work-info .animated {
+        display: none;
+    }
+
+    .work-info .about {
+        width: 100%;
+        float: right;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+
+    .work-info .about p {
+        color: white;
+        margin-top: 60px;
+        font-size: 20px;
+    }
+
+    .work-info span {
+        color: #EFD739;
+    }
+
+    .work-info canvas {
+        margin-top: 30px;
+    }
+
+    .password-error p {
+        color: white;
+        margin-top: 20px;
+        font-size: 30px
+    }
+
+    .password-error button {
+        width: 200px;
+        border: none;
+        border-radius: 10px;
+    }
+
+    .password-error .animated {
+        width: 400px;
+        margin-top: -30px;
+    }
+
+    .pending {
+        direction: rtl;
+    }
+
+    .pending .text {
+        float: right;
+        margin-top: 20px;
+        margin-right: 20px;
+        width: 95%;
+    }
+
+    .pending .text a {
+        margin-top: 40px;
+        color: white;
+        font-size: 15px;
+        text-decoration: none;
+        cursor: default;
+    }
+
+    .pending .text span {
+        color: #EFD739;
+    }
+
+    .pending .animated {
+        position: relative;
+        width: 400px;
+        left: 0px;
+        top: 0px;
+        margin-right: -10px;
+    }
+
+    .product-info {
+        direction: rtl;
+    }
+
+    .product-info .des {
+        float: none;
+        margin-right: 0px;
+    }
+
+    .product-info span {
+        color: #EFD739
+    }
+
+    .product-info .des p {
+        color: white;
+        font-size: 18px;
+        margin-top: 60px;
+        text-align: center;
+    }
+
+    .product-info .animated {
+       display: none
+    }
+
+    .getProduct {
+        direction: rtl;
+    }
+
+    .getProduct .des {
+        float: none;
+        margin-right: 20px;
+    }
+
+    .getProduct .des p {
+        margin-top: 70px;
+        color: white;
+        font-size: 15px
+    }
+
+    .getProduct .des span {
+        color: #EFD739;
+    }
+
+    .getProduct img {
+        width: 300px;
+        margin-top: 40px;
+        margin-right: auto;
+        margin-left: 40px;
+        border-radius: 20px;
+        box-shadow: 15px 15px #2e2c2c;
+    }
+}

@@ -1,0 +1,61 @@
+<%- include("../layout/admin_navbar") %>
+
+    <div class="category">
+        <p>اقسام المنتجات</p>
+
+        <center>
+        <small>ادوات التحكم بالاقسام</small>
+        <br>
+        <br>
+        <div class="contorls">
+            <select onchange="if (this.value) window.location.href=this.value">
+                <option value="/admin/category/filter/all" selected>فلتر</option>
+                <option value="/admin/category/filter/new" >الاحدث بالاضافة</option>
+                <option value="/admin/category/filter/old" >الاقدم بالاضافة</option>
+                <option value="/admin/category/filter/high">اعلى المنتجات</option>
+                <option value="/admin/category/filter/low">اعلى المنتجات</option>
+            </select>
+            <button onclick="window.location.href='/admin/category/add'" class="add"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#343232" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg></button>
+        </div>
+            
+</center>
+<br>
+        <div class="container">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">اسم القسم</th>
+                    <th scope="col">تعديل</th>
+                    <th scope="col">حذف</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% cat.forEach(data => { %>
+                    <tr>
+                        <td><%= data.name %></td>
+                        <td><button onclick="window.location.href='/admin/category/edit/<%= data.id%>'" class="edit"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-edit" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#343232" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M9 7h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3" />
+                            <path d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3" />
+                            <line x1="16" y1="5" x2="19" y2="8" />
+                          </svg></button></td>
+                        <td><form action="/admin/category/delete/<%= data.id%>?_method=DELETE" method="post">
+                            <button class="delete"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#343232" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <line x1="18" y1="6" x2="6" y2="18" />
+                                <line x1="6" y1="6" x2="18" y2="18" />
+                              </svg></button>
+                        </form></td>
+                      </tr>
+                  <% }); %>
+                </tbody>
+              </table>
+        </div>
+    </div>
+
+
+    <%- include("../layout/footer") %>

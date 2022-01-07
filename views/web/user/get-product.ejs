@@ -1,0 +1,14 @@
+<%- include("../layout/user_navbar") %>
+
+<div class="getProduct">
+    <div class="des">
+        <p>اسم المنتج : <span><%= product.name%></span></p>
+        <p>وصف المنتج : <span><%= product.des%></span></p>
+        <p>سعر المنتج : <span><%= product.price%>$</span></p>
+        <p>قسم المنتج : <span><%= product.cat%></span></p>
+    </div>
+
+    <img src="/upload/images/<%= product.image%>" alt="">
+</div>
+
+<%- include("../layout/footer") %>

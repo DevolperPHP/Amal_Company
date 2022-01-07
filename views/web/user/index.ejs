@@ -1,0 +1,85 @@
+<%- include("../layout/user_navbar") %>
+
+    <div class="index">
+        <center><small>ادوات البحث</small>
+            <br>
+            <div class="contorls">
+                <input type="text" id="input" placeholder="بحث عن منتج">
+                <ul id="suggestions" class="search-sug"></ul>
+                <select class="cat" onchange="if (this.value) window.location.href=this.value">
+                    <option value="/" selected>الاقسام</option>
+                    <option value="/">جميع الاقسام</option>
+                    <% cat.forEach(data => { %>
+                        <option value="/cat/<%= data.name%>"><%= data.name%></option>
+                    <% }) %>
+                </select>
+            </div>
+        </center>
+
+        <div class="index-cards">
+            <% product.forEach(data=> { %>
+                <div class="myCard" onclick="window.location.href='/getproduct/<%= data.name%>'">
+                    <img src="/upload/images/<%= data.image%>">
+                    <p class="title">
+                        <%= data.name%>
+                    </p>
+                    <p class="description">
+                        <%= data.des%>
+                    </p>
+                    <% if( data.isStock==1){ %>
+                        <p class="out-of-stuck">غير متوفر</p>
+                        <% } %>
+                            <p class="price">
+                                <%= data.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "," );%> <span>$</span>
+                            </p>
+                </div>
+                <% }); %>
+        </div>
+    </div>
+
+    <script>
+        var data = "<%= productName %>".split`,`
+        console.log(data);
+
+        (function () {
+            "use strict";
+            let inputField = document.getElementById('input');
+            let ulField = document.getElementById('suggestions');
+            inputField.addEventListener('input', changeAutoComplete);
+            ulField.addEventListener('click', selectItem);
+
+            function changeAutoComplete({ target }) {
+                let data = target.value;
+                ulField.innerHTML = ``;
+                if (data.length) {
+                    let autoCompleteValues = autoComplete(data);
+                    autoCompleteValues.forEach(value => { addItem(value); });
+                }
+            }
+
+            function autoComplete(inputValue) {
+                let destination = data
+                return destination.filter(
+                    (value) => value.toLowerCase().includes(inputValue.toLowerCase())
+                );
+            }
+
+            function addItem(value) {
+                ulField.innerHTML = ulField.innerHTML + `<li onclick="window.location.href='/getproduct/${value}'">${value}</li>`;
+            }
+
+            function selectItem({ target }) {
+                if (target.tagName === 'LI') {
+                    inputField.value = target.textContent;
+                    ulField.innerHTML = ``;
+                }
+            }
+        })();
+
+        function search() {
+            var inputValue = document.getElementById("input")
+            window.location.href = `/getproduct/${inputValue.value}`;
+        }
+    </script>
+
+    <%- include("../layout/footer") %>

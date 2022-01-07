@@ -1,0 +1,199 @@
+<%- include("../layout/user_navbar") %>
+
+  <div class="bill">
+    <div class="container">
+      <form action="/cart/clear/<%= user.id%>?_method=PUT" method="POST">
+        <button class="clear">حذف جميع المنتجات <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart-x" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#343232" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <circle cx="6" cy="19" r="2" />
+          <circle cx="17" cy="19" r="2" />
+          <path d="M17 17h-11v-14h-2" />
+          <path d="M6 5l7.999 .571m5.43 4.43l-.429 2.999h-13" />
+          <path d="M17 3l4 4" />
+          <path d="M21 3l-4 4" />
+        </svg></button>
+      </form>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">اسم المنتج</th>
+            <th scope="col">حذف</th>
+            <th scope="col">العدد</th>
+            <th scope="col">سعر القطعة</th>
+            <th scope="col">السعر النهائي</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for (let index=0; index < user.cart.length; index++) { %>
+            <tr>
+              <td id="names">
+                <%= dataName[index]%>
+              </td>
+              <td>
+                <form action="/cart/delete/<%= dataName[index]%>?_method=PUT" method="POST">
+                  <button style="background-color: #C64747;">X</button>
+                </form>
+              </td>
+              <td id="qty">
+                <%= dataQty[index]%>
+              </td>
+              <td>
+                <%= dataPrice[index]%>
+              </td>
+              <td id="price">
+                <%= dataQty[index] * dataPrice[index]%>
+              </td>
+            </tr>
+            <% } %>
+              <tr>
+                <form name="myForm" method="POST">
+                  <td><input name="productName" type="text" id="input" placeholder="اسم المنتج" autoComplete="off">
+                    <ul id="suggestions"></ul>
+                  </td><td></td>
+                  <td><input name="qty" type="number" placeholder="الكمية"></td>
+                  <td><button><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#343232" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="6" cy="19" r="2" />
+                    <circle cx="17" cy="19" r="2" />
+                    <path d="M17 17h-11v-14h-2" />
+                    <path d="M6 5l6.005 .429m7.138 6.573l-.143 .998h-13" />
+                    <path d="M15 6h6m-3 -3v6" />
+                  </svg></button></td>
+                      
+                  <td id="total"></td>
+                </form>
+              </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info container">
+      <form action="/bill/done" method="post">
+        <center><label for=""><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin"
+              width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#efd739" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <circle cx="12" cy="11" r="3" />
+              <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+            </svg></label>
+            <input type="text" name="name" placeholder="اسم المتجر">
+            <label for=""><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-cash" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#efd739" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <rect x="7" y="9" width="14" height="10" rx="2" />
+              <circle cx="14" cy="14" r="2" />
+              <path d="M17 9v-2a2 2 0 0 0 -2 -2h-10a2 2 0 0 0 -2 2v6a2 2 0 0 0 2 2h2" />
+            </svg></label>
+            <input type="text" placeholder="السعر النهائي" name="total_price" id="total_input">
+
+            <label for=""><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-report-analytics" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#efd739" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
+              <rect x="9" y="3" width="6" height="4" rx="2" />
+              <path d="M9 17v-5" />
+              <path d="M12 17v-1" />
+              <path d="M15 17v-3" />
+            </svg></label>
+            <input type="number" placeholder="الكمية النهائية" name="qty_total" id="qty_input">
+          <br>
+        <br>
+      <button>بيع</button>
+    </center>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    var total = document.querySelectorAll("#qty")
+    var array = []
+
+    for (let index = 0; index < total.length; index++) {
+      var element = array.push(Number(total[index].innerHTML));
+
+    }
+
+    console.log(array)
+
+
+
+    console.log(array.reduce((a, b) => a + b,))
+    document.getElementById("qty_input").value = array.reduce((a, b) => a + b,)
+
+  </script>
+
+  <script>
+    var total = document.querySelectorAll("#price")
+    var array = []
+
+    for (let index = 0; index < total.length; index++) {
+      var element = array.push(Number(total[index].innerHTML));
+
+    }
+
+    console.log(array)
+
+
+
+    console.log(array.reduce((a, b) => a + b,))
+    document.getElementById("total").innerHTML = array.reduce((a, b) => a + b,).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+    document.getElementById("total_input").value = array.reduce((a, b) => a + b,).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+
+  </script>
+
+  <script>
+    var form = document.forms['myForm'];
+
+    form.addEventListener('submit', function () {
+      var testVal = this.elements['productName'].value
+      if (testVal) {
+        this.action = '/cart/add/' + testVal + '?_method=PUT';
+        this.submit();
+      }
+    }, false);
+  </script>
+
+  <script>
+    var data = "<%= productName %>".split`,`
+    console.log(data);
+
+    (function () {
+      "use strict";
+      let inputField = document.getElementById('input');
+      let ulField = document.getElementById('suggestions');
+      inputField.addEventListener('input', changeAutoComplete);
+      ulField.addEventListener('click', selectItem);
+
+      function changeAutoComplete({ target }) {
+        let data = target.value;
+        ulField.innerHTML = ``;
+        if (data.length) {
+          let autoCompleteValues = autoComplete(data);
+          autoCompleteValues.forEach(value => { addItem(value); });
+        }
+      }
+
+      function autoComplete(inputValue) {
+        let destination = data
+        return destination.filter(
+          (value) => value.toLowerCase().includes(inputValue.toLowerCase())
+        );
+      }
+
+      function addItem(value) {
+        ulField.innerHTML = ulField.innerHTML + `<li>${value}</li>`;
+      }
+
+      function selectItem({ target }) {
+        if (target.tagName === 'LI') {
+          inputField.value = target.textContent;
+          ulField.innerHTML = ``;
+        }
+      }
+    })();
+
+    function search() {
+      var inputValue = document.getElementById("input")
+      window.location.href = `/getproduct/${inputValue.value}`;
+    }
+  </script>
+
+  <%- include("../layout/footer") %>
